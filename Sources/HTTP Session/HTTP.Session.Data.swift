@@ -1,9 +1,7 @@
 extension HTTP.Session {
     /// Key/value data associated with a session.
     public struct Data: Sendable, Equatable {
-        public var snapshot: [String: String] { storage }
-
-        private var storage: [String: String]
+        var storage: [String: String]
 
         public init() {
             storage = [:]
@@ -13,10 +11,6 @@ extension HTTP.Session {
             storage = initialData
         }
 
-        public subscript(_ key: String) -> String? {
-            get { storage[key] }
-            set { storage[key] = newValue }
-        }
     }
 }
 

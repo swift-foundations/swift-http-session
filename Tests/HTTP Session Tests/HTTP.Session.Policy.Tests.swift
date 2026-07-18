@@ -46,7 +46,7 @@ extension HTTP.Session.Policy {
             session.destroy()
 
             #expect(policy.commit(session) == .destroy(.init(string: "abc")))
-            #expect(policy.expiredCookie().configuration.maxAge == 0)
+            #expect(policy.cookie(expiry: .expired).configuration.maxAge == 0)
         }
 
         @Test
@@ -60,7 +60,7 @@ extension HTTP.Session.Policy {
         }
 
         private static var policy: HTTP.Session.Policy {
-            .init(configuration: .init(cookieName: "session"))
+            .init(configuration: .init(cookie: .init(name: "session")))
         }
     }
 }
