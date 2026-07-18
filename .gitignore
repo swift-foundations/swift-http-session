@@ -1,0 +1,13 @@
+# ========== CANONICAL (auto-synced, do not edit) ==========
+
+*~
+.DS_Store
+Package.resolved
+DerivedData/
+Thumbs.db
+.build/
+.swiftpm/
+.benchmarks/
+.swiftlint/RemoteConfigCache
+
+# ========== END CANONICAL ==========
