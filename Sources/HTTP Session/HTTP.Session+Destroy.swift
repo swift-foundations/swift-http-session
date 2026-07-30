@@ -1,5 +1,5 @@
 extension HTTP.Session {
-    public mutating func destroy() {
-        lifecycle = .destroyed
-    }
+  public mutating func destroy() {
+    lifecycle = .destroyed
+  }
 }
